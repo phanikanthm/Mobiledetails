@@ -1,0 +1,88 @@
+<html>
+
+<head>
+
+    <style>
+    
+    table,td,th{
+
+        border:1px solid black;
+        border-collapse: collapse;
+        
+    }
+    
+    
+    </style>
+</head>
+
+<body>
+
+    Device Id:<input type="text" id="de"><br>
+    Device Information:<input type="text" id="di"><br>
+    Price:<input type="number" id="pr"><br>
+    Seller:<input type="text" id="se"><br>
+    Address:<input type="text" id="ad"><br>
+    <input type="button"  onclick="sub()" value="Submit">
+
+    <table id="demo">
+        <th>Device Id</th>
+        <th>Device Information</th>
+        <th>Price</th>
+        <th>Seller</th>
+        <th>Address</th>
+    </table>
+    <script>
+
+        function sub(){
+            var dei= document.getElementById("de").value;
+            var dii=document.getElementById("di").value;
+            var pri=document.getElementById("pr").value;
+            var sel=document.getElementById("se").value;
+            var add=document.getElementById("ad").value;
+
+            var newRow =document.createElement("tr");
+
+
+
+            var Data= document.createElement("td");
+            var Newnode=document.createTextNode(dei);
+            Data.appendChild(Newnode);
+            newRow.appendChild(Data);
+
+            var Data1= document.createElement("td");
+            var Newnode1=document.createTextNode(dii);
+            Data1.appendChild(Newnode1);
+            newRow.appendChild(Data1);
+
+            var Data2= document.createElement("td");
+            var Newnode2=document.createTextNode(pri);
+            Data2.appendChild(Newnode2);
+            newRow.appendChild(Data2);
+
+            var Data3= document.createElement("td");
+            var Newnode3=document.createTextNode(sel);
+            Data3.appendChild(Newnode3);
+            newRow.appendChild(Data3);
+
+            var Data4= document.createElement("td");
+            var Newnode4=document.createTextNode(add);
+            Data4.appendChild(Newnode4);
+            newRow.appendChild(Data4);
+
+             var tbody=document.getElementById("demo");
+
+                tbody.appendChild(newRow);
+
+
+
+            
+
+
+
+
+
+        }
+    
+    </script>
+</body>
+</html>
